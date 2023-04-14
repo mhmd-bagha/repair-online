@@ -1,4 +1,4 @@
-import Menu from "@/components/home/menu";
+import Menu from "Components/home/menu";
 
 const Home = () => {
     return (

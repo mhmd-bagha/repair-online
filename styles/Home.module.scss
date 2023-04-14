@@ -1,0 +1,10 @@
+@import 'globals';
+
+.menu_link {
+  display: block;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: $selective_yellow;
+  }
+}
