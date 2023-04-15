@@ -45,3 +45,36 @@
     }
   }
 }
+
+// service ous work
+.services_ous_work {
+  position: relative;
+  transition: all .3s ease-in-out;
+
+  .hover_dot {
+    position: absolute;
+    width: .4rem;
+    height: .4rem;
+    content: '';
+    background: $selective_yellow;
+    border-radius: 1rem;
+    right: 2.2rem;
+    transform: scale(0);
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover {
+    .hover_dot {
+      transform: scale(1);
+    }
+
+    .hover_image {
+      position: relative;
+      top: -.4rem;
+    }
+
+    .hover_title {
+      color: $default_blue;
+    }
+  }
+}
