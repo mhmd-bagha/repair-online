@@ -14,6 +14,10 @@ $default_blue_rgb: rgb(3, 84, 165);
   color: $selective_yellow;
 }
 
+.color_yellow_hover:hover {
+  color: $selective_yellow;
+}
+
 .bg_default_blue {
   background: $default_blue;
 }
