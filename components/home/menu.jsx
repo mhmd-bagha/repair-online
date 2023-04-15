@@ -32,7 +32,7 @@ const Menu = () => {
         <>
             <div className="flex justify-between items-center relative lg:hidden py-3 px-4">
                 {/* open button */}
-                <Image src='/online-repair.png' alt="logo" className="w-36 h-auto" width={200} height={200}/>
+                <Image src='/images/header/online-repair.png' alt="logo" className="w-36 h-auto" width={200} height={200}/>
                 <button onClick={() => setOpenMenu(true)}>
                     <HiBars3 size={25} className="color-gunmetal"/>
                 </button>
@@ -41,7 +41,7 @@ const Menu = () => {
                 className={`bg-white fixed top-0 bottom-0 z-10 lg:relative lg:flex items-center justify-between py-3 px-4 lg:px-5 transition-all duration-500 ease-in-out ${activeMenuClass}`}>
                 {/* header */}
                 <div className="flex justify-between items-center">
-                    <Image src='/online-repair.png' alt="logo" className="w-36 h-auto" width={200} height={200}/>
+                    <Image src='/images/header/online-repair.png' alt="logo" className="w-36 h-auto" width={200} height={200}/>
                     {/* close button */}
                     <button className="block lg:hidden float-right" onClick={() => setOpenMenu(false)}>
                         <VscChromeClose size={25} className="color-gunmetal"/>
