@@ -2,6 +2,8 @@ $main_color: #FFFFFF;
 $selective_yellow: #FCB900;
 $default_blue: #0354A5;
 $cultured: #F6F6F6;
+$color_maastricht_blue: #001832;
+$color_prussian_blue: #002852;
 $default_blue_rgb: rgb(3, 84, 165);
 
 .color_default_blue {
@@ -18,4 +20,8 @@ $default_blue_rgb: rgb(3, 84, 165);
 
 .bg_cultured {
   background: $cultured;
+}
+
+.bg_prussian_blue {
+  background: $color_prussian_blue;
 }
