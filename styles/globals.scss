@@ -1,7 +1,21 @@
 $main_color: #FFFFFF;
 $selective_yellow: #FCB900;
 $default_blue: #0354A5;
+$cultured: #F6F6F6;
+$default_blue_rgb: rgb(3, 84, 165);
+
+.color_default_blue {
+  color: $default_blue;
+}
+
+.color_yellow {
+  color: $selective_yellow;
+}
 
 .bg_default_blue {
   background: $default_blue;
+}
+
+.bg_cultured {
+  background: $cultured;
 }

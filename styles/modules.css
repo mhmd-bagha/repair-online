@@ -10,3 +10,7 @@
 * {
     font-family: 'iran-sans', serif;
 }
+
+body {
+    direction: rtl;
+}

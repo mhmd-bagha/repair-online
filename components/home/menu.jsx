@@ -5,6 +5,7 @@ import Link from "next/link";
 import useDeviceWidth from "@/helpers/devices-width";
 import {VscChromeClose} from "react-icons/vsc";
 import styles from 'Styles/Home.module.scss'
+import {BsDot} from "react-icons/bs";
 
 const Menu = () => {
     const [openMenu, setOpenMenu] = useState(undefined)
@@ -14,9 +15,9 @@ const Menu = () => {
     const activeMenuClass = useMemo(() => {
         switch (openMenu) {
             case true:
-                return 'left-0 right-0';
+                return 'right-0 left-0';
             case false:
-                return 'left-full';
+                return 'right-[999px]';
             default:
                 return '';
         }
@@ -46,11 +47,22 @@ const Menu = () => {
                         <VscChromeClose size={25} className="color-gunmetal"/>
                     </button>
                 </div>
-                <div className="block lg:flex text-end justify-center items-center gap-5 mt-10 lg:mt-0 px-4">
+                {/* links */}
+                <div className="block lg:flex text-start justify-center items-center gap-5 mt-10 lg:mt-0 px-4">
                     <Link href="/" className={`py-1 lg:py-0 ${styles.menu_link}`}>خانه</Link>
                     <Link href="/about-us" className={`py-1 lg:py-0 ${styles.menu_link}`}>درباره ما</Link>
                     <Link href="/contact-us" className={`py-1 lg:py-0 ${styles.menu_link}`}>تماس با ما</Link>
                 </div>
+            </div>
+            {/* search bar !(now disabled) */}
+            <div className={`py-6 xl:py-0 px-3 lg:px-0 justify-end ${styles.search_box}`}>
+                {/* search icon */}
+                <p className={styles.search_icon}/>
+                <input type="text"
+                       className="py-1.5 w-full lg:w-1/1 2xl:w-1/3 pr-12 shadow-md border outline-none border-white rounded-full bg_cultured"
+                       placeholder="چه کمکی از دست ما برمیاد؟" disabled={true}/>
+                {/* dot icon */}
+                <BsDot size={27} className="relative left-7 color_yellow"/>
             </div>
         </>
     )
