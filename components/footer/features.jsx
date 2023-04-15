@@ -14,7 +14,7 @@ const Features = () => {
             {features.map((feature, index) => (
                 <div className="flex items-center my-5" key={index}>
                     <Image src={feature.image} alt={feature.title} width={28} height={28}/>
-                    <p className="text-xs text-gray-700 pr-4">{feature.title}</p>
+                    <p className="text-xs lg:text-sm text-gray-700 pr-4">{feature.title}</p>
                 </div>
             ))}
         </div>
