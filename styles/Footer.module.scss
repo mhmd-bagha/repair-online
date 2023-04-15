@@ -1,0 +1,12 @@
+@import 'globals';
+
+.footer_feature {
+  background: rgba($default_blue_rgb, .1);
+  position: relative;
+  bottom: 0;
+}
+
+.footer {
+  background: $color_maastricht_blue;
+  height: 100%;
+}

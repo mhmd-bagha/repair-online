@@ -1,0 +1,80 @@
+@import 'globals';
+
+// header
+.menu_link {
+  display: block;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: $selective_yellow;
+  }
+}
+
+// header
+.search_box {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  input {
+    &::placeholder {
+      color: rgba($default_blue_rgb, .8);
+      font-size: .8rem;
+    }
+  }
+
+  .search_icon {
+    width: 1rem;
+    height: 1rem;
+    border: .15rem solid $default_blue;
+    border-radius: 50%;
+    position: relative;
+    right: 2rem;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: .5rem;
+      height: .10rem;
+      background-color: $default_blue;
+      display: block;
+      bottom: 0;
+      left: -.1rem;
+      box-shadow: 0 0 0 .1rem $cultured;
+      transform: rotate(-40deg);
+    }
+  }
+}
+
+// service ous work
+.services_ous_work {
+  position: relative;
+  transition: all .3s ease-in-out;
+
+  .hover_dot {
+    position: absolute;
+    width: .4rem;
+    height: .4rem;
+    content: '';
+    background: $selective_yellow;
+    border-radius: 1rem;
+    right: 2.2rem;
+    transform: scale(0);
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover {
+    .hover_dot {
+      transform: scale(1);
+    }
+
+    .hover_image {
+      position: relative;
+      top: -.4rem;
+    }
+
+    .hover_title {
+      color: $default_blue;
+    }
+  }
+}
