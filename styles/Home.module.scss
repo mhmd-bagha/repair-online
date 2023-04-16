@@ -78,3 +78,23 @@
     }
   }
 }
+
+// intro phone
+.animate_phone {
+  animation: phone 1s linear infinite;
+
+  @keyframes phone {
+    25% {
+      transform: rotate(200deg);
+    }
+    50% {
+      transform: rotate(160deg);
+    }
+    75% {
+      transform: rotate(170deg);
+    }
+    100% {
+      transform: rotate(200deg);
+    }
+  }
+}
