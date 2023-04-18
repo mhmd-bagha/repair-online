@@ -3,17 +3,11 @@ import styles from "Styles/Home.module.scss";
 
 const ServicesOusWork = () => {
     const services = [
-        {title: 'لباسشویی', image: '/images/main/services/repair-laundry.png'},
-        {title: 'ظرفشویی', image: '/images/main/services/dish-washing.png'},
-        {title: 'جاروبرقی', image: '/images/main/services/vacuum-cleaner.png'},
-        {title: 'گاز رومیزی', image: '/images/main/services/table-gas.png'},
-        {title: 'یخچال و ساید', image: '/images/main/services/fridge-side.png'},
         {title: 'ماکروفر', image: '/images/main/services/microwave.png'},
-        {title: 'جاروشارژی', image: '/images/main/services/vacuum-cleaner2.png'},
-        {title: 'اوتو', image: '/images/main/services/iron.png'},
-        {title: 'قهوه ساز', image: '/images/main/services/coffee-maker.png'},
-        {title: 'چای ساز', image: '/images/main/services/tea-maker.png'},
-        {title: 'سایر لوازم خانگی', image: '/images/main/services/other.png'},
+        {title: 'اجاق گاز', image: '/images/main/services/gas.png'},
+        {title: 'هود', image: '/images/main/services/hood.png'},
+        {title: 'توستر', image: '/images/main/services/toaster.png'},
+        {title: 'گاز رومیزی', image: '/images/main/services/table-gas.png'},
     ]
 
     return (

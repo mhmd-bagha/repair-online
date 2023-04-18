@@ -1,5 +1,5 @@
 import Image from "next/image";
-import IntroImage from 'Image/main/intro.jpg';
+import IntroImage from 'Image/main/intro.png';
 
 const Intro = () => {
     return (
