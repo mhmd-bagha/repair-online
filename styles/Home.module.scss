@@ -79,22 +79,22 @@
   }
 }
 
-// intro phone
+// contact us phone
 .animate_phone {
   animation: phone 1s linear infinite;
 
   @keyframes phone {
     25% {
-      transform: rotate(200deg);
+      transform: rotate(0deg);
     }
     50% {
-      transform: rotate(160deg);
+      transform: rotate(30deg);
     }
     75% {
-      transform: rotate(170deg);
+      transform: rotate(30deg);
     }
     100% {
-      transform: rotate(200deg);
+      transform: rotate(0deg);
     }
   }
 }
