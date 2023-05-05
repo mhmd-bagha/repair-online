@@ -30,9 +30,7 @@ const Intro = () => {
                 {/* location */}
                 <div className="flex items-center text-white">
                     <GoLocation size={25}/>
-                    <Link href="/" className="pr-3"> تهران، خیابان شریعتی ، نرسیده به پل سیدخندان، پلاک 874، نبش
-                        کوچه اشراقی،
-                        طبقه چهارم </Link>
+                    <Link href="/" className="pr-3">تهران، شریعیتی، بعد از تقاطق مطهری، کوچه شکر آبی، پلاک 60</Link>
                 </div>
                 {/* email */}
                 <div className="flex items-center text-gray-100 mt-6">
@@ -42,7 +40,7 @@ const Intro = () => {
                 {/* tel-phone */}
                 <div className="flex items-center text-gray-100 mt-6">
                     <FiPhoneCall size={25}/>
-                    <Link href="tel:021-45396" className="pr-3">021-45396</Link>
+                    <Link href="tel:09190755349" className="pr-3">09190755349</Link>
                 </div>
                 {/* instagram */}
                 <div className="flex items-center text-gray-100 mt-6">
