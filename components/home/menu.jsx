@@ -6,8 +6,19 @@ import useDeviceWidth from "@/helpers/devices-width";
 import {VscChromeClose} from "react-icons/vsc";
 import styles from 'Styles/Home.module.scss'
 import {BsDot} from "react-icons/bs";
+import {usePathname} from "next/navigation";
+
+const LogoMenu = () => {
+    return (
+        <Link href='/'>
+            <Image src='/images/header/online-repair-logo.jpg' alt="تعمیر ابتین" className="w-16 h-auto rounded-full"
+                   width={200} height={200}/>
+        </Link>
+    )
+}
 
 const Menu = () => {
+    const pathname = usePathname()
     const [openMenu, setOpenMenu] = useState(undefined)
     // Get use device user
     const {getDevice} = useDeviceWidth()
@@ -23,6 +34,21 @@ const Menu = () => {
         }
     }, [openMenu]);
 
+    const menuItems = [
+        {
+            title: 'خانه',
+            url: '/'
+        },
+        {
+            title: 'درباره ما',
+            url: '/about-us'
+        },
+        {
+            title: 'تماس با ما',
+            url: '/contact-us'
+        },
+    ]
+
     useEffect(() => {
         // Set openMenu based on device width
         (getDevice() === 'sm' || getDevice() === 'md') ? setOpenMenu(false) : setOpenMenu(undefined)
@@ -32,7 +58,7 @@ const Menu = () => {
         <>
             <div className="flex justify-between items-center relative lg:hidden py-3 px-4">
                 {/* open button */}
-                <Image src='/images/header/online-repair-logo.jpg' alt="logo" className="w-16 h-auto rounded-full" width={200} height={200}/>
+                <LogoMenu/>
                 <button onClick={() => setOpenMenu(true)}>
                     <HiBars3 size={25} className="color-gunmetal"/>
                 </button>
@@ -41,7 +67,7 @@ const Menu = () => {
                 className={`bg-white fixed top-0 bottom-0 z-10 lg:relative lg:flex items-center justify-between py-3 px-4 lg:px-5 transition-all duration-500 ease-in-out ${activeMenuClass}`}>
                 {/* header */}
                 <div className="flex justify-between items-center">
-                    <Image src='/images/header/online-repair-logo.jpg' alt="logo" className="w-16 h-auto rounded-full" width={200} height={200}/>
+                    <LogoMenu/>
                     {/* close button */}
                     <button className="block lg:hidden float-right" onClick={() => setOpenMenu(false)}>
                         <VscChromeClose size={25} className="color-gunmetal"/>
@@ -49,9 +75,11 @@ const Menu = () => {
                 </div>
                 {/* links */}
                 <div className="block lg:flex text-start justify-center items-center gap-5 mt-10 lg:mt-0 px-4">
-                    <Link href="/" className={`py-1 lg:py-0 ${styles.menu_link}`}>خانه</Link>
-                    <Link href="/about-us" className={`py-1 lg:py-0 ${styles.menu_link}`}>درباره ما</Link>
-                    <Link href="/contact-us" className={`py-1 lg:py-0 ${styles.menu_link}`}>تماس با ما</Link>
+                    {menuItems.map((item, index) => (
+                        <Link href={item.url}
+                              className={`py-1 lg:py-0 ${styles.menu_link} ${pathname === item.url && styles.active}`}
+                              key={index}>{item.title}</Link>
+                    ))}
                 </div>
             </div>
             {/* search bar !(now disabled) */}
