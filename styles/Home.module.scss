@@ -8,6 +8,10 @@
   &:hover {
     color: $selective_yellow;
   }
+
+  &.active {
+    color: $selective_yellow;
+  }
 }
 
 // header

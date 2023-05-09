@@ -6,6 +6,7 @@ import useDeviceWidth from "@/helpers/devices-width";
 import {VscChromeClose} from "react-icons/vsc";
 import styles from 'Styles/Home.module.scss'
 import {BsDot} from "react-icons/bs";
+import {usePathname} from "next/navigation";
 
 const LogoMenu = () => {
     return (
@@ -17,6 +18,7 @@ const LogoMenu = () => {
 }
 
 const Menu = () => {
+    const pathname = usePathname()
     const [openMenu, setOpenMenu] = useState(undefined)
     // Get use device user
     const {getDevice} = useDeviceWidth()
@@ -74,7 +76,8 @@ const Menu = () => {
                 {/* links */}
                 <div className="block lg:flex text-start justify-center items-center gap-5 mt-10 lg:mt-0 px-4">
                     {menuItems.map((item, index) => (
-                        <Link href={item.url} className={`py-1 lg:py-0 ${styles.menu_link}`}
+                        <Link href={item.url}
+                              className={`py-1 lg:py-0 ${styles.menu_link} ${pathname === item.url && styles.active}`}
                               key={index}>{item.title}</Link>
                     ))}
                 </div>
