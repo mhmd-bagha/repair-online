@@ -1,9 +1,8 @@
 import Image from "next/image";
 import {GoLocation} from "react-icons/go";
 import Link from "next/link";
-import {MdAlternateEmail} from "react-icons/md";
 import {FiPhoneCall} from "react-icons/fi";
-import {BsInstagram} from "react-icons/bs";
+import {SupportNumber, supportNumberMobile} from "@/helpers/supportNumber";
 
 const Intro = () => {
     const symbols = [
@@ -15,7 +14,7 @@ const Intro = () => {
         <div className="grid grid-flow-row lg:grid-flow-col grid-cols-1 lg:grid-cols-2">
             {/* intro */}
             <div>
-                <p className="text-sm text-white">تعمیرآنلاین دقیقا همونجایی هستش که برای حال خوب لوازم خونگی بهش
+                <p className="text-sm text-white">تعمیرآبتین دقیقا همونجایی هستش که برای حال خوب لوازم خونگی بهش
                     نیاز
                     داری! اینجا بخند، حتی وقتی لوازم خونگیت داغونه...</p>
                 {/* symbols */}
@@ -32,20 +31,10 @@ const Intro = () => {
                     <GoLocation size={25}/>
                     <Link href="/" className="pr-3">تهران، شریعیتی، بعد از تقاطق مطهری، کوچه شکر آبی، پلاک 60</Link>
                 </div>
-                {/* email */}
-                <div className="flex items-center text-gray-100 mt-6">
-                    <MdAlternateEmail size={25}/>
-                    <Link href="mailto:example@example.com" className="pr-3">example@example.com</Link>
-                </div>
                 {/* tel-phone */}
                 <div className="flex items-center text-gray-100 mt-6">
                     <FiPhoneCall size={25}/>
-                    <Link href="tel:09190755349" className="pr-3">09190755349</Link>
-                </div>
-                {/* instagram */}
-                <div className="flex items-center text-gray-100 mt-6">
-                    <BsInstagram size={25}/>
-                    <Link href="https://instagram.com/example" className="pr-3">tamironlinecom</Link>
+                    <SupportNumber className="pr-3">{supportNumberMobile()}</SupportNumber>
                 </div>
             </div>
         </div>
